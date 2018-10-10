@@ -33,4 +33,8 @@ class Admin extends Authenticatable
     {
         return $this->hasMany('App\Restaurant');
     }
+    public function menus()
+    {
+        return $this->hasMany('App\Menu');
+    }
 }
