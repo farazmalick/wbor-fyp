@@ -20,7 +20,11 @@ class CreateMenusTable extends Migration
             $table->integer('price');
             $table->string('photo');
             $table->timestamps();
+
+
+            $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
         });
+
     }
 
     /**

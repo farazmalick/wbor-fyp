@@ -30,8 +30,6 @@
 
 
         {!! Form::open(['method'=>'DELETE','action'=>['AdminRestaurantsController@destroy',$restaurant->id]]) !!}
-
-
         <div class="form-group">
             {!! Form::submit('Delete Address',['class'=>'btn btn-danger col-sm-6']) !!}
         </div>

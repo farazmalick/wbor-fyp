@@ -40,6 +40,15 @@ Route::resource('admin/restaurants', 'AdminRestaurantsController',['names'=>[
     'edit'=>'admin.restaurants.edit'
 ]]);
 
+    Route::resource('admin/menus', 'AdminMenusController',['names'=>[
+
+        'index'=>'admin.menus.index',
+        'create'=>'admin.menus.create',
+        'store'=>'admin.menus.store',
+        'edit'=>'admin.menus.edit'
+    ]]);
+
+
 });
 
 

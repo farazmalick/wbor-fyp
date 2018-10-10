@@ -126,10 +126,10 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage Menu<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">View Menu</a>
+                                <a href="{{route('admin.menus.index')}}">View Menu</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Add New</a>
+                                <a href="{{route('admin.menus.create')}}">Add New</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
