@@ -8,7 +8,7 @@ class Restaurant extends Model
 {
     //
     protected $fillable = [
-        'admin_id', 'address',
+         'address',
     ];
 
     public function admin()

@@ -28,7 +28,19 @@ Route::get('/home', 'HomeController@index');
     Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
     Route::post('/admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
     Route::post('/users/logout', 'Auth\LoginController@userLogout')->name('users.logout');
+/////////////////////////////////////////
+Route::group(['middleware'=>'auth:admin'],function ()
+{
+Route::resource('admin/restaurants', 'AdminRestaurantsController',['names'=>[
 
+
+    'index'=>'admin.restaurants.index',
+    'create'=>'admin.restaurants.create',
+    'store'=>'admin.restaurants.store',
+    'edit'=>'admin.restaurants.edit'
+]]);
+
+});
 
 
 

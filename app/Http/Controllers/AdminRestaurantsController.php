@@ -16,6 +16,8 @@ class AdminRestaurantsController extends Controller
     public function index()
     {
         //
+        $restaurants=Restaurant::all();
+        return view('admin.restaurants.index',compact('restaurants'));
 
     }
 
@@ -27,6 +29,7 @@ class AdminRestaurantsController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -38,6 +41,8 @@ class AdminRestaurantsController extends Controller
     public function store(Request $request)
     {
         //
+        Restaurant::create($request->all());
+        return redirect('/admin/restaurants');
     }
 
     /**
@@ -60,6 +65,9 @@ class AdminRestaurantsController extends Controller
     public function edit($id)
     {
         //
+        $restaurant=Restaurant::findOrFail($id);
+        return view('admin.restaurants.edit',compact('restaurant'));
+
     }
 
     /**
@@ -72,6 +80,9 @@ class AdminRestaurantsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $restaurant=Restaurant::findOrFail($id);
+        $restaurant->update($request->all());
+        return redirect('/admin/restaurants');
     }
 
     /**
@@ -83,5 +94,8 @@ class AdminRestaurantsController extends Controller
     public function destroy($id)
     {
         //
+        $restaurant=Restaurant::findOrFail($id);
+        $restaurant->delete();
+        return redirect('/admin/restaurants');
     }
 }

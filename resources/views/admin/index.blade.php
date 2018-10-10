@@ -108,10 +108,10 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage Restaurants<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">View Branches</a>
+                                <a href="{{route('admin.restaurants.index')}}">View Branches</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Add New Branche</a>
+                                <a href="{{route('admin.restaurants.create')}}">Add New Branche</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -245,7 +245,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+
                     @yield('content')
                 </div>
                 <!-- /.col-lg-12 -->
