@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RestaurantsRequest;
+use App\Http\Requests\AdminsRequest;
 use Illuminate\Http\Request;
 use App\Admin;
-use App\Restaurant;
 
-class AdminRestaurantsController extends Controller
+class AdminsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,8 @@ class AdminRestaurantsController extends Controller
     public function index()
     {
         //
-        $restaurants=Restaurant::all();
-        return view('admin.restaurants.index',compact('restaurants'));
-
+       $admins=Admin::all();
+        return view('admin.users.index',compact('admins'));
     }
 
     /**
@@ -30,7 +28,7 @@ class AdminRestaurantsController extends Controller
     public function create()
     {
         //
-
+        return view('admin.users.create');
     }
 
     /**
@@ -39,11 +37,21 @@ class AdminRestaurantsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RestaurantsRequest $request)
+    public function store(AdminsRequest $request)
     {
         //
-        Restaurant::create($request->all());
-        return redirect('/admin/restaurants');
+        if(trim($request->password)=='')
+        {
+            $input= $request->except('password');
+        }
+        else
+        {
+            $input=$request->all();
+        }
+        $input['password']=bcrypt($request->password);
+        Admin::create($input);
+        return redirect('/admin/users');
+
     }
 
     /**
@@ -66,9 +74,6 @@ class AdminRestaurantsController extends Controller
     public function edit($id)
     {
         //
-        $restaurant=Restaurant::findOrFail($id);
-        return view('admin.restaurants.edit',compact('restaurant'));
-
     }
 
     /**
@@ -78,12 +83,9 @@ class AdminRestaurantsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RestaurantsRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
-        $restaurant=Restaurant::findOrFail($id);
-        $restaurant->update($request->all());
-        return redirect('/admin/restaurants');
     }
 
     /**
@@ -95,8 +97,9 @@ class AdminRestaurantsController extends Controller
     public function destroy($id)
     {
         //
-        $restaurant=Restaurant::findOrFail($id);
-        $restaurant->delete();
-        return redirect('/admin/restaurants');
+        $admins=Admin::findOrFail($id);
+        $admins->delete();
+        return redirect('/admin/users');
+
     }
 }

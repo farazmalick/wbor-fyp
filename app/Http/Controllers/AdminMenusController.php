@@ -43,7 +43,7 @@ class AdminMenusController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\MenusRequest $request)
     {
         //
         $input=$request->all();
@@ -93,7 +93,7 @@ class AdminMenusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Requests\MenusRequest $request, $id)
     {
         //
         $input=$request->all();

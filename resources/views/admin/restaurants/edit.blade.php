@@ -37,7 +37,7 @@
         {!! Form::close() !!}
 
 
-
+        @include('includes.createuserform_error')
 
     </div>
 

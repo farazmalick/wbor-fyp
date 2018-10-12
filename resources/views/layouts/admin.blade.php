@@ -98,10 +98,10 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Admin<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">All Admin</a>
+                                <a href="{{route('admin.users.index')}}">All Admin</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Create New Admin</a>
+                                <a href="{{route('admin.users.create')}}">Create New Admin</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -114,9 +114,6 @@
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{route('admin.restaurants.index')}}">View Branches</a>
-                            </li>
-                            <li>
-                                <a href="{{route('admin.restaurants.create')}}">Add New Branche</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

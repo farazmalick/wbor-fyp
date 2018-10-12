@@ -4,7 +4,7 @@
 
 
 @section('content')
-    <h1>Edit Menu</h1>
+    <h1>Menu Edit and Delete Section:</h1>
 
     <div class="row">
         <div class="col-sm-3">
@@ -46,17 +46,18 @@
 
 
     <div class="form-group">
-        {!! Form::submit('Update Menu',['class'=>'btn btn-primary col-sm-6']) !!}
+        {!! Form::submit('Update',['class'=>'btn btn-primary col-sm-6']) !!}
     </div>
 
     {!! Form::close() !!}
 
     {!! Form::open(['method'=>'DELETE','action'=>['AdminMenusController@destroy',$menu->id]]) !!}
     <div class="form-group">
-        {!! Form::submit('Delete Item',['class'=>'btn btn-danger col-sm-6']) !!}
+        {!! Form::submit('Delete',['class'=>'btn btn-danger col-sm-6']) !!}
     </div>
 
     {!! Form::close() !!}
+            @include('includes.createuserform_error')
 
     </div>
 

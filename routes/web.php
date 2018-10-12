@@ -31,7 +31,17 @@ Route::get('/home', 'HomeController@index');
 /////////////////////////////////////////
 Route::group(['middleware'=>'auth:admin'],function ()
 {
-Route::resource('admin/restaurants', 'AdminRestaurantsController',['names'=>[
+    Route::resource('admin/users', 'AdminsController',['names'=>[
+
+
+        'index'=>'admin.users.index',
+        'create'=>'admin.users.create',
+        'store'=>'admin.users.store']
+    ]);
+
+
+
+    Route::resource('admin/restaurants', 'AdminRestaurantsController',['names'=>[
 
 
     'index'=>'admin.restaurants.index',
