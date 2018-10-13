@@ -61,6 +61,15 @@ Route::group(['middleware'=>'auth:admin'],function ()
 
 });
 
+Route::resource('user/reservations', 'UsersController',['names'=>[
+
+    'index'=>'user.reservations.index',
+    'create'=>'user.reservations.create',
+    'store'=>'user.reservations.store',
+    'edit'=>'user.reservations.edit'
+]]);
+
+
 
 
 

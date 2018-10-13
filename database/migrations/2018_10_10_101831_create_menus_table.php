@@ -22,7 +22,7 @@ class CreateMenusTable extends Migration
             $table->timestamps();
 
 
-            $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
+            //$table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
         });
 
     }

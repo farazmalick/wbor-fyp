@@ -92,7 +92,7 @@
         <div class="intro-text">
             <div class="intro-lead-in">Welcome To Our</div>
             <div class="intro-heading text-uppercase">Fine Dining Resraurent!</div>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger " href="" >Reserve Now</a>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger " href="{{route('user.reservations.create')}}" >Reserve Now</a>
         </div>
     </div>
 </header>
