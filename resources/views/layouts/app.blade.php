@@ -60,7 +60,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href=""><i class="fa fa-user fa-fw"></i> View Profile</a>
+                            <li><a href="{{route('user.profiles.edit',Auth::guard('web')->id())}}"><i class="fa fa-user fa-fw"></i> View Profile</a>
                             </li>
 
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> View Reservations</a>

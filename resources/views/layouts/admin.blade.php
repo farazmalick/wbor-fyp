@@ -146,7 +146,7 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">View Users</a>
+                                <a href="{{route('user.profiles.index')}}">View Users</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

@@ -69,6 +69,12 @@ Route::resource('user/reservations', 'UsersController',['names'=>[
     'edit'=>'user.reservations.edit'
 ]]);
 
+Route::resource('user/profiless', 'EditProfileController',['names'=>[
+
+    'index'=>'user.profiles.index',
+    'edit'=>'user.profiles.edit'
+]]);
+
 
 
 
