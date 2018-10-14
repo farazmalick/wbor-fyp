@@ -61,7 +61,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    @if (Auth::guest())
+                    @if (Auth::guard('admin')->guest())
 
                     @else
                         <li class="dropdown">

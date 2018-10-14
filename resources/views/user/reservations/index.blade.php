@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>Reservations</h1>
+    <h1 style="text-align: center">Reservations</h1>
     <table class="table">
         <thead>
         <tr>
@@ -39,6 +39,10 @@
         @endif
         </tbody>
     </table>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">{{$reservations->render()}}</div>
+    </div>
+
 
 
 

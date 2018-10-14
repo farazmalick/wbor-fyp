@@ -17,7 +17,7 @@ class AdminRestaurantsController extends Controller
     public function index()
     {
         //
-        $restaurants=Restaurant::all();
+        $restaurants=Restaurant::orderBy('id', 'ASC')->paginate(5);
         return view('admin.restaurants.index',compact('restaurants'));
 
     }

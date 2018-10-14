@@ -60,6 +60,10 @@
 
 
     @endif
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-5">{{$restaurants->render()}}</div>
+        </div>
+
 
 
 </div>

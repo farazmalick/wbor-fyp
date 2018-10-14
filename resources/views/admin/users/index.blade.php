@@ -4,7 +4,7 @@
 
 
 @section('content')
-    <h1>Administrators</h1>
+    <h1 style="text-align: center">Administrators</h1>
 
 
         @if($admins)
@@ -42,12 +42,11 @@
                 @endforeach
                 </tbody>
             </table>
-
-
-
-
-
         @endif
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">{{$admins->render()}}</div>
+    </div>
+
 
 @stop
 

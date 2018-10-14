@@ -17,7 +17,7 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $reservations=reservation::all();
+        $reservations=reservation::orderBy('id', 'DESC')->paginate(8);
         return view('user.reservations.index',compact('reservations'));
 
     }

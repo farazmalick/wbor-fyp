@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <h1>App Users</h1>
+    <h1 style="text-align: center">App Users</h1>
     <table class="table">
         <thead>
         <tr>
@@ -48,14 +48,9 @@
     </table>
 
 
-
-
-
-
-
-
-
-
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">{{$users->render()}}</div>
+    </div>
 
 
 @stop

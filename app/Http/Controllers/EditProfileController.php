@@ -17,7 +17,7 @@ class EditProfileController extends Controller
     public function index()
     {
         //
-        $users =User::all();
+        $users =User::orderBy('id', 'DESC')->paginate(8);
         return view('user.profiles.index',compact('users'));
     }
 
