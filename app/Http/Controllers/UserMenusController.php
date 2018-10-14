@@ -16,7 +16,7 @@ class UserMenusController extends Controller
     public function index()
     {
         //
-        $menus=Menu::all();
+        $menus=Menu::orderBy('id', 'ASC')->paginate(4);
         return view('user.menus.index',compact('menus'));
     }
 

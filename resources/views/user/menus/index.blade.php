@@ -27,7 +27,7 @@
                                     <tr>
 
                                         <td><img height="100" width="100" src="{{URL::to('/')}}/images/{{$menu->photo}}" alt="update Menu"></td>
-                                        <td>{{$menu->name}}</td>
+                                        <td><a href="#">{{$menu->name}}</a></td>
                                         <td>{{$menu->price}}/-</td>
                                     </tr>
                                 @endforeach
@@ -39,6 +39,9 @@
 
 
                         @endif
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-5">{{$menus->render()}}</div>
+                            </div>
 
 
 
