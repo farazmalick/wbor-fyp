@@ -4,7 +4,7 @@
 
 
 @section('content')
-    <h1>Create Admin</h1>
+    <h1 class="w3-animate-right" style="text-align: center">Create Admin</h1>
     {!! Form::open(['method'=>'POST','action'=>'AdminsController@store']) !!}
 
 

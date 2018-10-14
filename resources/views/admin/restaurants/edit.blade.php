@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <h1>Delete and Update Section</h1>
+    <h1 style="text-align: center" class="w3-animate-right">Delete and Update Section</h1>
 
 
 

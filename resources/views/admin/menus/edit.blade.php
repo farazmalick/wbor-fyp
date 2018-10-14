@@ -4,13 +4,13 @@
 
 
 @section('content')
-    <h1>Menu Edit and Delete Section:</h1>
+    <h1 class="w3-animate-bottom" style="text-align: center">Menu Edit and Delete Section:</h1>
 
     <div class="row">
         <div class="col-sm-3">
 
 
-            <img src="{{URL::to('/')}}/images/{{$menu->photo}}" alt="" class="img-responsive img-rounded">
+            <img class="w3-animate-zoom" height="260" width="275" src="{{URL::to('/')}}/images/{{$menu->photo}}" alt="" class="img-responsive img-rounded">
 
 
         </div>

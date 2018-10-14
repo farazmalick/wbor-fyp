@@ -5,8 +5,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Reservation Form</div>
+                    <div class="panel-heading w3-animate-bottom">Reservation Form</div>
                     <div class="panel-body">
+                        <div class="w3-animate-right">
                             {!! Form::open(['method'=>'POST','action'=>'UsersController@store','class'=>'form-horizontal']) !!}
                             {{ csrf_field() }}
 
@@ -82,6 +83,7 @@
 
                         {!! Form::close() !!}
 
+                        </div>
                     </div>
                 </div>
             </div>

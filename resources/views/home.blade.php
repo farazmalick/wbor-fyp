@@ -40,7 +40,13 @@
             <ul class="navbar-nav text-uppercase ml-auto">
                 <ul class="navbar-nav text-uppercase ml-auto   ">
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Home</a>
+                        @if (Auth::guard('web')->check())
+                            <a class="nav-link " href="{{ url('/home') }}">Home</a>
+                        @else
+                            <a class="nav-link " href="{{ url('/') }}">Home</a>
+                        @endif
+
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="{{route('user.menus.index')}}">Menu</a>

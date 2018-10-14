@@ -258,10 +258,52 @@
             <!-- /.row -->
         </div>
 
+
     </div>
     <!-- /#page-wrapper -->
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; WBO Restaurant Reservation 2018</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://www.twitter.com/">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4"  >
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <span><a href="#">Privacy Policy</a></span>
+                        </li>
+                        <li class="list-inline-item">
+                            {{--<font color="#212529"><a href="#">Terms of Use</a></font>--}}
+                            <span color="#212529"><a href="#">Terms of Use</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </div>
+
 <!-- /#wrapper -->
 
 <!-- jQuery -->

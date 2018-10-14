@@ -4,12 +4,15 @@
 
 
 @section('content')
-    <h1 style="text-align: center">Administrators</h1>
+
+    <div class="w3-container">
+        <h1 class="w3-animate-right" style="text-align: center">Administrators</h1>
+    </div>
 
 
         @if($admins)
 
-            <table class="table w3-table-all  w3-centered w3-hoverable">
+            <table class="table w3-table-all  w3-centered w3-hoverable w3-card w3-animate-bottom">
                 <thead>
                 <tr class="w3-red">
                     <th>Id</th>

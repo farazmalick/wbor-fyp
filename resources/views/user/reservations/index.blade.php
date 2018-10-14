@@ -3,10 +3,13 @@
 
 @section('content')
 
-    <h1 style="text-align: center">Reservations</h1>
-    <table class="table">
+    <div class="w3-container">
+        <h1 class="w3-animate-right" style="text-align:center">Reservations</h1>
+    </div>
+
+    <table class="table w3-table-all  w3-centered w3-hoverable w3-card w3-animate-bottom">
         <thead>
-        <tr>
+        <tr class="w3-red">
             <th>Id</th>
             <th>User</th>
             <th>Branch</th>
@@ -27,12 +30,13 @@
                 <tr>
                     <td>{{$reservation->id}}</td>
                     <td>{{$reservation->user->name}}</td>
-                    <td>{{$reservation->restaurant->address}}</td>
+                    <td>{{$reservation->restaurant?$reservation->restaurant->address:'Address Not Available'}}</td>
                     <td>{{$reservation->date}}</td>
                     <td>{{$reservation->time}}</td>
                     <td>{{$reservation->guests}}</td>
                     <td>{{$reservation->phone}}</td>
-                    <td><a href="{{route('user.reservations.edit',$reservation->id)}}">{{$reservation->status}}</a></td>
+                    <td><div class="w3-tooltip"><span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">click to edit!</span>
+                            <a href="{{route('user.reservations.edit',$reservation->id)}}">{{$reservation->status}}</a></div></td>
 
                 </tr>
             @endforeach

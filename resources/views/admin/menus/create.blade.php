@@ -4,7 +4,7 @@
 
 
 @section('content')
-    <h1>Add New Menu Item</h1>
+    <h1 class="w3-animate-bottom" style="text-align: center">Add New Menu Item</h1>
     {!! Form::open(['method'=>'POST','action'=>'AdminMenusController@store','files'=>true]) !!}
 
     {{csrf_field()}}

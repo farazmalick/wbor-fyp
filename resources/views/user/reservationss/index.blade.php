@@ -3,16 +3,20 @@
 
 
 @section('content')
-    <h1 style="text-align:center">Reservations</h1>
+    <div class="w3-container">
+        <h1 class="w3-animate-right" style="text-align:center">Reservations</h1>
+    </div>
+
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">History</div>
+                    <div class="panel-heading w3-animate-left">History</div>
                     <div class="panel-body">
-                        <table class="table">
+                        <table class="table w3-table-all  w3-centered w3-hoverable w3-card-4 w3-animate-bottom">
                             <thead>
-                            <tr>
+                            <tr class="w3-red">
 
                                 <th>User Name</th>
                                 <th>Branch</th>
@@ -32,7 +36,7 @@
                                 @foreach($reservations as $reservation)
                                     <tr>
                                         <td>{{$reservation->user->name}}</td>
-                                        <td>{{$reservation->restaurant->address}}</td>
+                                        <td>{{$reservation->restaurant?$reservation->restaurant->address:'Address Not Available'}}</td>
                                         <td>{{$reservation->date}}</td>
                                         <td>{{$reservation->time}}</td>
                                         <td>{{$reservation->guests}}</td>

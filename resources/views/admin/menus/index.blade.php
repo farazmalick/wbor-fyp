@@ -4,10 +4,15 @@
 
 
 @section('content')
-    <h1 style="text-align: center">Menu</h1>
+    <div class="w3-container">
+        <h1 class="w3-animate-right" style="text-align: center">Menu</h1>
+
+    </div>
+
+
     @if($menus)
 
-        <table class="table w3-table-all  w3-centered w3-hoverable">
+        <table class="table w3-table-all  w3-centered w3-hoverable w3-animate-bottom">
             <thead>
             <tr class="w3-red">
                 <th>Id</th>
@@ -23,8 +28,16 @@
             @foreach($menus as $menu)
                 <tr>
                     <td>{{$menu->id}}</td>
-                    <td><img height="50" width="50" src="{{URL::to('/')}}/images/{{$menu->photo}}" alt="update Menu"></td>
-                    <td><a href="{{route('admin.menus.edit',$menu->id)}}">{{$menu->name}}</a></td>
+                    <td><div class="w3-dropdown-hover">
+                    <img class="w3-animate-zoom" height="50" width="50" src="{{URL::to('/')}}/images/{{$menu->photo}}" alt="update Menu">
+                            <div class="w3-dropdown-content" style="width:200px">
+                                <img src="{{URL::to('/')}}/images/{{$menu->photo}}"  style="width:100%">
+                            </div>
+                        </div>
+                    </td>
+
+                    <td><div class="w3-tooltip"><span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">click to edit!</span>
+                            <a href="{{route('admin.menus.edit',$menu->id)}}">{{$menu->name}}</a></div></td>
                     <td>{{$menu->price}}</td>
                     <td>{{$menu->admin->name}}</td>
                     <td>{{$menu->created_at?$menu->created_at->diffForHumans():'Date Not Available'}}</td>

@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>Update & Delete Section:</h1>
+    <h1 class="w3-animate-right" style="text-align: center">Update & Delete Section:</h1>
 
     {!! Form::model($reservations,['method'=>'PATCH','action'=>['UsersController@update',$reservations->id]]) !!}
 

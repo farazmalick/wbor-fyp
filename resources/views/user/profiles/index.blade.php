@@ -7,8 +7,13 @@
 
 @section('content')
 
-    <h1 style="text-align: center">App Users</h1>
-    <table class="table w3-table-all  w3-centered w3-hoverable">
+    <div class="w3-container">
+        <h1 class="w3-animate-right" style="text-align: center">App Users</h1>
+    </div>
+
+
+
+    <table class="table w3-table-all  w3-centered w3-hoverable w3-card w3-animate-bottom">
         <thead>
         <tr class="w3-red">
             <th>Id</th>
