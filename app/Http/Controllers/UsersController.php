@@ -17,6 +17,9 @@ class UsersController extends Controller
     public function index()
     {
         //
+        $reservations=reservation::all();
+        return view('user.reservations.index',compact('reservations'));
+
     }
 
     /**
@@ -73,6 +76,10 @@ class UsersController extends Controller
     public function edit($id)
     {
         //
+        $reservations=reservation::findOrFail($id);
+        $restaurants=Restaurant::pluck('address','id')->all();
+        return view('user.reservations.edit',compact('reservations','restaurants'));
+
     }
 
     /**
@@ -85,6 +92,9 @@ class UsersController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $reservation=reservation::findOrFail($id);
+        $reservation->update($request->all());
+        return redirect('/user/reservations');
     }
 
     /**
@@ -96,5 +106,8 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+        $reservation=reservation::findOrFail($id);
+        $reservation->Delete();
+        return redirect('/user/reservations');
     }
 }

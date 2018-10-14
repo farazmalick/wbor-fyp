@@ -136,7 +136,7 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage Reservations<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">View Reservations</a>
+                                <a href="{{route('user.reservations.index')}}">View Reservations</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
