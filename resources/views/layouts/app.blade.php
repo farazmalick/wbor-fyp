@@ -70,7 +70,7 @@
                             <li><a href="{{route('user.profiles.edit',Auth::guard('web')->id())}}"><i class="fa fa-user fa-fw"></i> View Profile</a>
                             </li>
 
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> View Reservations</a>
+                            <li><a href="{{route('user.reservationss.index')}}"><i class="fa fa-gear fa-fw"></i> View Reservations</a>
                             </li>
                             <li>
                                 <a href="{{ url('/logout') }}"

@@ -12,7 +12,7 @@
             <th>Branch</th>
             <th>Date</th>
             <th>Time</th>
-            <th>No of Visitors</th>
+            <th>No of Persons</th>
             <th>Phone#</th>
             <th>Status</th>
         </tr>

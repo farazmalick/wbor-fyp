@@ -80,6 +80,11 @@ Route::resource('user/menus', 'UserMenusController',['names'=>[
     'index'=>'user.menus.index'
 ]]);
 
+Route::resource('user/reservationss', 'UserReservationssController',['names'=>[
+
+    'index'=>'user.reservationss.index'
+]]);
+
 
 
 
