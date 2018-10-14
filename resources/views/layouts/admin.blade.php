@@ -15,6 +15,9 @@
     <link href="{{asset('css/admin-app.css')}}" rel="stylesheet">
 
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
+    {{--W3SCHOOL Table css--}}
+    <link  href="{{asset('css/w3.css')}}" rel="stylesheet">
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

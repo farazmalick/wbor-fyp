@@ -4,12 +4,12 @@
 
 
 @section('content')
-    <h1>Menu</h1>
+    <h1 style="text-align: center">Menu</h1>
     @if($menus)
 
-        <table class="table">
+        <table class="table w3-table-all  w3-centered w3-hoverable">
             <thead>
-            <tr>
+            <tr class="w3-red">
                 <th>Id</th>
                 <th>Photo</th>
                 <th>Name</th>

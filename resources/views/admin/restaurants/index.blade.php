@@ -4,7 +4,7 @@
 
 
 @section('content')
-<h1>Restaurant Branches</h1>
+<h1 style="text-align: center">Restaurant Branches</h1>
 
 <div class="col-sm-6">
     {!! Form::open(['method'=>'POST','action'=>'AdminRestaurantsController@store']) !!}
@@ -34,11 +34,13 @@
 
     @if($restaurants)
 
-        <table class="table">
+        <table class="table w3-table-all  w3-centered w3-hoverable">
+
             <thead>
-            <tr>
+
+            <tr class="w3-red">
                 <th>Id</th>
-                <th>Name</th>
+                <th>Address</th>
                 <th>Created</th>
                 <th>Updated</th>
             </tr>

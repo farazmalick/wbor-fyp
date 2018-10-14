@@ -72,6 +72,7 @@
 
                             <li><a href="{{route('user.reservationss.index')}}"><i class="fa fa-gear fa-fw"></i> View Reservations</a>
                             </li>
+                            <div class="dropdown-divider"></div>
                             <li>
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();

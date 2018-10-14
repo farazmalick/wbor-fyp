@@ -8,13 +8,14 @@
 @section('content')
 
     <h1 style="text-align: center">App Users</h1>
-    <table class="table">
+    <table class="table w3-table-all  w3-centered w3-hoverable">
         <thead>
-        <tr>
+        <tr class="w3-red">
             <th>Id</th>
             <th>Name</th>
             <th>Email</th>
             <th>Created</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>

@@ -66,6 +66,13 @@
 
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{route('user.profiles.edit',Auth::guard('web')->id())}}"><i class="fa fa-user fa-fw"></i> View Profile</a>
+                                </li>
+
+                                <li><a href="{{route('user.reservationss.index')}}"><i class="fa fa-gear fa-fw"></i> View Reservations</a>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
                                 <li>
                                     <a href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
