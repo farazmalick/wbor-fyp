@@ -43,7 +43,7 @@
                         <a class="nav-link " href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Menu</a>
+                        <a class="nav-link " href="{{route('user.menus.index')}}">Menu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#portfolio">Gallery</a>

@@ -75,6 +75,13 @@ Route::resource('user/profiless', 'EditProfileController',['names'=>[
     'edit'=>'user.profiles.edit'
 ]]);
 
+Route::resource('user/menus', 'UserMenusController',['names'=>[
+
+    'index'=>'user.menus.index'
+]]);
+
+
+
 
 
 

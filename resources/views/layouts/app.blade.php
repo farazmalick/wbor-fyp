@@ -39,9 +39,16 @@
             </button>
 
             <!-- Branding Image -->
+            @if (Auth::guard('web')->check())
+
             <a class="navbar-brand" href="{{ url('/home') }}">
-                WBO Restaurant Reservation
+                Home
             </a>
+            @else
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    Home
+                </a>
+                @endif
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
