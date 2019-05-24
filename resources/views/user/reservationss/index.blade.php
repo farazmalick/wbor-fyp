@@ -17,6 +17,7 @@
                         <table class="table w3-table-all  w3-centered w3-hoverable w3-card-4 w3-animate-bottom">
                             <thead>
                             <tr class="w3-red">
+                                <th>Reservation Code</th>
 
                                 <th>User Name</th>
                                 <th>Branch</th>
@@ -35,6 +36,7 @@
                             @if($reservations)
                                 @foreach($reservations as $reservation)
                                     <tr>
+                                        <td>{{$reservation->id}}</td>
                                         <td>{{$reservation->user->name}}</td>
                                         <td>{{$reservation->restaurant?$reservation->restaurant->address:'Address Not Available'}}</td>
                                         <td>{{$reservation->date}}</td>

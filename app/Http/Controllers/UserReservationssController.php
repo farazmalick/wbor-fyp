@@ -22,7 +22,7 @@ class UserReservationssController extends Controller
         $user = Auth::guard('web')->user();
         $id = Auth::guard('web')->id();
         /*$reservations=reservation::all();*/
-        $reservations=reservation::where('user_id','=',$id)->paginate(5);
+        $reservations=reservation::orderBy('id', 'DESC')->where('user_id','=',$id)->paginate(5);
         return view('user.reservationss.index',compact('reservations'));
     }
 

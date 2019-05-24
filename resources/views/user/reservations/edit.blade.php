@@ -55,7 +55,7 @@
 
         {!! Form::label('status','Status:') !!}
 
-        {!! Form::select('status',array('confirmed'=>'confirmed','cancelled'=>'cancelled'),null,['class'=>'form-control']) !!}
+        {!! Form::select('status',array('confirmed'=>'confirmed','cancelled'=>'cancelled','completed'=>'completed'),null,['class'=>'form-control']) !!}
 
     </div>
 

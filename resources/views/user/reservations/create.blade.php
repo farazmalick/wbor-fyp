@@ -26,7 +26,7 @@
                                 <label for="date" class="col-md-4 control-label">Date:</label>
 
                                 <div class="col-md-6">
-                                    <input id="date" type="date" class="form-control" name="date"  required autofocus>
+                                    <input id="date" type="date" class="form-control" name="date" min="{{ Carbon\Carbon::today()->format('Y-m-d')}}" value="{{ Carbon\Carbon::today()->format('Y-m-d')}}"  required autofocus>
 
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                 <label for="date" class="col-md-4 control-label">Time:</label>
 
                                 <div class="col-md-6">
-                                    <input id="time" type="time" class="form-control" name="time"  required autofocus>
+                                    <input id="time" type="time" class="form-control" name="time"   required autofocus>
 
                                 </div>
                             </div>
